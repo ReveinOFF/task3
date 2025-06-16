@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+button {
+  @apply rounded-md shadow-sm shadow-black py-4 px-6 hover:shadow-md hover:shadow-black uppercase;
+}
+
+.logo {
+  @apply w-[50px] h-[50px] border border-black rounded-full flex justify-center items-center;
+}
+
+input,
+textarea {
+  @apply rounded-lg border border-black p-4 w-full bg-white;
+}
+
+textarea {
+  @apply resize-none;
+}
+
+.error {
+  @apply mt-1 text-red-600;
+}
